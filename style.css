@@ -1,0 +1,87 @@
+:root{
+    --background-color:#102342;
+    --primary-color:#1D417A;
+    --secondary-color:#3C85FA;
+    --teritary-color:#2D63BA;
+}
+
+body{
+    background-color:var(--background-color);
+}
+button{
+    width: 90%;
+    height: 90%;
+    justify-self: center;
+    align-self: center;
+    background:none;
+    border: none;
+    color: var(--secondary-color);
+    font-size: 20px;
+    
+}
+.container{
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    margin-top:100px;
+    width: 500px;
+    height:550px;
+    display: grid;
+    grid-template-areas: 
+    "screen screen screen screen"
+    'top-row top-row top-row top-row'
+    "numbers numbers numbers arithmetic"
+    "numbers numbers numbers arithmetic"
+    "numbers numbers numbers arithmetic"
+    "bottom-row bottom-row bottom-row arithmetic "
+    ;
+    
+}
+.screen{
+    grid-area: screen;
+    background-color: var(--teritary-color) ;
+    height: 130px;
+    width: 100%;
+    
+    
+}
+.screen p{
+    text-align: right;
+}
+#prevNum{
+    color: var(--primary-color);
+    font-size: 25px;
+
+}
+#currentNum{
+    color: var(--secondary-color);
+    font-size: 30px;
+}
+
+.top-row{
+    grid-area:top-row;
+    width: 100%;
+    height: 100%;
+    background-color:beige;
+}
+.numbers{
+    display: grid;
+    grid-area: numbers;
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+    
+}
+.bottom-row{
+    grid-area: bottom-row;
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+}
+.arithmetic{
+    grid-area: arithmetic;
+    width: 100%;
+    height: 100%;
+    background-color: lavender;
+}
