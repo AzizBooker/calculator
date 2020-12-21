@@ -19,6 +19,12 @@ button{
     font-size: 20px;
     
 }
+input{
+    display: inline-block;
+    float: right;
+    background-color: var(--teritary-color);
+    
+}
 .container{
     background-color: var(--primary-color);
     margin: 0 auto;
@@ -26,27 +32,28 @@ button{
     width: 500px;
     height:550px;
     display: grid;
+ 
     grid-template-areas: 
     "screen screen screen screen"
-    'top-row top-row top-row top-row'
-    "numbers numbers numbers arithmetic"
-    "numbers numbers numbers arithmetic"
-    "numbers numbers numbers arithmetic"
-    "bottom-row bottom-row bottom-row arithmetic "
-    ;
+    'top-row top-row top-row top-row' 
+    "numbers numbers numbers numbers"
+    "numbers numbers numbers numbers"
+    "numbers numbers numbers numbers"
+    "numbers numbers numbers numbers"
+    "bottom-row bottom-row bottom-row bottom-row ";
+    
     
 }
 .screen{
     grid-area: screen;
     background-color: var(--teritary-color) ;
-    height: 130px;
+    height: 100%px;
     width: 100%;
     
     
+    
 }
-.screen p{
-    text-align: right;
-}
+
 #prevNum{
     color: var(--primary-color);
     font-size: 25px;
@@ -55,33 +62,34 @@ button{
 #currentNum{
     color: var(--secondary-color);
     font-size: 30px;
+    text-overflow: none;
 }
 
 .top-row{
     grid-area:top-row;
     width: 100%;
-    height: 100%;
-    background-color:beige;
+    height: 10%;
+    background-color:var(--background-color);
 }
-.numbers{
+.buttons{
     display: grid;
     grid-area: numbers;
     height: 100%;
     width: 100%;
-    background-color: blue;
-    grid-template-rows: repeat(3,1fr);
-    grid-template-columns: repeat(3,1fr);
+    background-color:  var(--primary-color);
+    grid-template-rows: repeat(5,1fr);
+    grid-template-columns: repeat(4,1fr);
     
+}
+.arithmetic{
+    background-color: var(--background-color);
+}
+.equal{
+  background-color: #11233f;
 }
 .bottom-row{
     grid-area: bottom-row;
     width: 100%;
     height: 100%;
     background-color: lightblue;
-}
-.arithmetic{
-    grid-area: arithmetic;
-    width: 100%;
-    height: 100%;
-    background-color: lavender;
 }

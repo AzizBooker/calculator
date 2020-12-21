@@ -8,30 +8,37 @@
 <body>
     <div class="container">
         <div class="screen">
-            <p id='prevNum'>0</p>
-            <p id='currentNum'>0</p>
-        </div>
-        <div class='top-row'>
-
+            <input type='text' id='prevNum' disabled>
+            <input type='text' id='currentNum'>
         </div>
 
-        <div class='numbers'>
+        <div class='buttons'>
+            <button onclick=onButtonClick(this) value=1 >1</button>
+            <button onclick=onButtonClick(this) value=exponent >X^</button>
+            <button onclick=onButtonClick(this) value=1 >1</button>
+            <button onclick=onButtonClick(this) value=back >back</button>
             <button onclick=onButtonClick(this) value=1 >1</button>
             <button onclick=onButtonClick(this) value=2>2</button>
             <button onclick=onButtonClick(this) value=3 >3</button>
+            <button class="arithmetic"onclick=onButtonClick(this) value=%>%</button>
             <button onclick=onButtonClick(this) value=4>4</button>
             <button onclick=onButtonClick(this) value=5>5</button>
             <button onclick=onButtonClick(this) value=6>6</button>
+            <button class="arithmetic"onclick=onButtonClick(this) value=X>X</button>
             <button onclick=onButtonClick(this) value=7>7</button>
             <button onclick=onButtonClick(this) value=8>8</button>
             <button onclick=onButtonClick(this) value=9>9</button>
+            <button class ="arithmetic"onclick=onButtonClick(this) value=->-</button>
+            <button onclick=onButtonClick(this) value=0>0</button>
+            <button onclick=onButtonClick(this) value=.>.</button>
+            <button class='equal' onclick=onButtonClick(this) value='equal'>=</button>
+            <button class="arithmetic" onclick=onButtonClick(this) value=+>+</button>
+            
         </div>
-        <div class='bottom-row'>
+       <!--  <div class='bottom-row'>
 
-        </div>
-        <div class="arithmetic">
-
-        </div>
+        </div> -->
+        
 
     </div>
 
