@@ -25,9 +25,10 @@ function multiply (arg) {
 	
 }
 
-function power(num1,num2) {
-	return num1**num2;
+function power(arg) {
+    return arg[0]**arg[1];
 }
+
 
 function factorial(num) {
 	var factorial=1
@@ -38,24 +39,10 @@ function factorial(num) {
 return factorial
 	
 }
-function operation(arg){
-var num=[]
-var ans=0
-for(var i=0;i<arg.length;i++){
-    switch(arg[i]){
-       
-        case 'add':
-            ans+=sum(num)
-        break;
-        case typeof 'number':
-            num.push(arg[i])
-        break;
-        
+function operation(func,arg){
 
-        
-    }
-}
-return ans;
+return func(arg)
+
 }
 module.exports = {
 	add,
